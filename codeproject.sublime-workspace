@@ -1,0 +1,772 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"resources/"
+			],
+			[
+				"b",
+				"bower_components/"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"RE",
+				"REQUIRE_PATH"
+			],
+			[
+				"o",
+				"operators"
+			],
+			[
+				"ex",
+				"expressions"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"exp",
+				"expressions"
+			],
+			[
+				"op",
+				"operator"
+			],
+			[
+				"expre",
+				"expression"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"ca",
+				"categorias"
+			],
+			[
+				"substr_co",
+				"substr_count"
+			],
+			[
+				"sp_aut",
+				"spl_autoload_register"
+			],
+			[
+				"incl",
+				"incl1	include_once …"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"ari",
+				"artigos"
+			],
+			[
+				"enfo",
+				"endforeach"
+			],
+			[
+				"in",
+				"incl1	include_once …"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"endfo",
+				"endforeach"
+			],
+			[
+				"PHP_URL_PA",
+				"PHP_URL_PATH"
+			],
+			[
+				"pars",
+				"parse_url"
+			],
+			[
+				"__d",
+				"__DIR__"
+			],
+			[
+				"reuqi",
+				"require_once"
+			],
+			[
+				"require",
+				"require_once"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"su",
+				"sucesso"
+			],
+			[
+				"fi",
+				"fields"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"fil",
+				"field"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"get",
+				"getMessage"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"resul",
+				"results"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"wh",
+				"where"
+			],
+			[
+				"__",
+				"__DIR__"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"spl_auto",
+				"spl_autoload_register"
+			],
+			[
+				"FILTER_va",
+				"FILTER_VALIDATE_INT"
+			],
+			[
+				"FILTER_SA",
+				"FILTER_SANITIZE_STRING"
+			],
+			[
+				"INPUT_",
+				"INPUT_POST"
+			],
+			[
+				"ob_end",
+				"ob_end_flush()	standard Function"
+			],
+			[
+				"WCMS_BASE",
+				"WCMS_BASE_URL"
+			],
+			[
+				"WCMS_",
+				"WCMS_BASE_DIR"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ar",
+				"arquivo_temporario"
+			],
+			[
+				"li",
+				"limitar_ext"
+			],
+			[
+				"tam",
+				"tamanho_bytes"
+			],
+			[
+				"dir",
+				"dirname()	standard Function"
+			],
+			[
+				"se",
+				"senha"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"r",
+				"routeParams"
+			],
+			[
+				"loca",
+				"locationProvider"
+			],
+			[
+				"route",
+				"routeProvider"
+			],
+			[
+				"men",
+				"Mensagem"
+			],
+			[
+				"broder",
+				"border-radius"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"con",
+				"contactForm"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"_",
+				"_POST"
+			],
+			[
+				"valo",
+				"valor2"
+			],
+			[
+				"valor",
+				"valor1"
+			],
+			[
+				"p",
+				"produtos"
+			],
+			[
+				"prod",
+				"produto"
+			],
+			[
+				"endof",
+				"endforeach	Language Construct"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"usu",
+				"usuario"
+			],
+			[
+				"cl",
+				"clientes"
+			],
+			[
+				"PRINT",
+				"print_r()	standard Function"
+			],
+			[
+				"prit",
+				"print_r()	standard Function"
+			],
+			[
+				"t",
+				"throw	Throw Exception"
+			],
+			[
+				"s",
+				"smarty"
+			],
+			[
+				"temp",
+				"templates_c"
+			],
+			[
+				"spl_au",
+				"spl_autoload_register()	SPL Function"
+			],
+			[
+				"gera",
+				"gerador"
+			],
+			[
+				"requi",
+				"require_once	Language Construct"
+			],
+			[
+				"fun",
+				"funcionario"
+			],
+			[
+				"h",
+				"hook"
+			],
+			[
+				"abs",
+				"abstract 	Language Construct"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"wid",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 152.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set synta",
+				"Set Syntax: PHP"
+			],
+			[
+				"set syntax ht",
+				"Set Syntax: Batch File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 384.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/andre/Development/codeproject-course",
+		"/home/andre/Development/codeproject-course/app",
+		"/home/andre/Development/codeproject-course/app/Http",
+		"/home/andre/Development/codeproject-course/app/Http/Controllers"
+	],
+	"file_history":
+	[
+		"/home/andre/Development/codeAgenda/app/Entities/Pessoa.php",
+		"/home/andre/Development/codeAgenda/app/Entities/Telefone.php",
+		"/home/andre/Development/codeAgenda/resources/views/partials/contato.blade.php",
+		"/home/andre/Development/codeAgenda/app/Http/Controllers/ExampleController.php",
+		"/home/andre/Development/codeAgenda/app/Http/routes.php",
+		"/home/andre/Development/codeAgenda/gulpfile.js",
+		"/home/andre/Development/codeAgenda/resources/views/agenda.blade.php",
+		"/home/andre/Development/codeAgenda/resources/views/layout.blade.php",
+		"/home/andre/Development/codeAgenda/resources/assets/js/custom.js",
+		"/home/andre/Development/codeAgenda/resources/assets/less/app.less",
+		"/home/andre/Development/codeAgenda/package.json",
+		"/home/andre/Development/codeAgenda/bower.json",
+		"/home/andre/Development/codeAgenda/.bowerrc",
+		"/home/andre/Development/codeAgenda/database/seeds/DatabaseSeeder.php",
+		"/home/andre/Development/codeAgenda/database/seeds/TelefoneTableSeeder.php",
+		"/home/andre/Development/codeAgenda/database/seeds/PessoaTableSeeder.php",
+		"/home/andre/Development/codeAgenda/database/factories/ModelFactory.php",
+		"/home/andre/Development/codeAgenda/database/migrations/2016_02_23_192824_create_pessoas_table.php",
+		"/home/andre/Development/codeAgenda/database/migrations/2016_02_23_193816_create_telefones_table.php",
+		"/home/andre/Development/codeAgenda/app/Http/Controllers/Controller.php",
+		"/home/andre/Development/codeAgenda/bootstrap/app.php",
+		"/home/andre/Development/codeAgenda/composer.json",
+		"/home/andre/Development/codeAgenda/.env",
+		"/home/andre/Development/codeAgenda/app/User.php",
+		"/home/andre/Development/codeAgenda/app/Providers/EventServiceProvider.php",
+		"/home/andre/Development/codeAgenda/app/Providers/AuthServiceProvider.php",
+		"/home/andre/Development/codeAgenda/app/Providers/AppServiceProvider.php",
+		"/home/andre/Development/codeAgenda/app/Listeners/ExampleListener.php",
+		"/home/andre/Development/codeAgenda/app/Jobs/Job.php",
+		"/home/andre/Development/codeAgenda/app/Jobs/ExampleJob.php",
+		"/home/andre/Development/codeAgenda/app/Http/Middleware/Authenticate.php",
+		"/home/andre/Development/codeAgenda/app/Http/Middleware/ExampleMiddleware.php",
+		"/home/andre/Development/codeAgenda/app/Exceptions/Handler.php",
+		"/home/andre/Development/codeAgenda/app/Events/ExampleEvent.php",
+		"/home/andre/Development/codeAgenda/app/Events/Event.php",
+		"/home/andre/Development/codeAgenda/app/Console/Kernel.php",
+		"/home/andre/Development/app/ado/teste.php",
+		"/home/andre/Development/cursoupinside/index.php",
+		"/home/andre/Development/cursoupinside/admin/index.php",
+		"/home/andre/Development/cursoupinside/admin/painel.php",
+		"/home/andre/Development/cursoupinside/_app/Config.inc.php",
+		"/home/andre/Development/app/ado/TSqlDelete.class.php",
+		"/home/andre/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/andre/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/andre/Development/site-news/connection.php",
+		"/home/andre/Development/site-news/app/classes/url.php",
+		"/home/andre/Development/site-news/inc/erro/404.php",
+		"/home/andre/Development/site-news/composer.json",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/.htaccess",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/inc/header.php",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/inc/footer.php",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/layout/index.html",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/app/classes/email.php",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/public/index.php",
+		"/home/andre/CursosDown/asolucoesweb/Site de Noticias/Projeto/site-news/autoload.php",
+		"/home/andre/Development/atetchti/config/Config.php",
+		"/home/andre/Development/atetchti/composer.json",
+		"/home/andre/Development/wordpress/wp-content/themes/blog/index.php",
+		"/home/andre/Development/wordpress/wp-content/themes/blog/footer.php",
+		"/home/andre/Development/wordpress/wp-content/themes/blog/style.css",
+		"/home/andre/Downloads/phpoo/App/Database/livro.db",
+		"/home/andre/Development/mvcSON/app/init.php",
+		"/home/andre/Development/mvcSON/app/Views/index/index.phtml",
+		"/home/andre/Development/mvcSON/app/Views/index/empresa.phtml",
+		"/home/andre/Development/mvcSON/app/Views/index/layout.phtml",
+		"/home/andre/Development/mvcSON/vendor/simplesmente/Controller/Action.php",
+		"/home/andre/Development/mvcSON/app/Views/layout.phtml",
+		"/home/andre/Development/mvcSON/vendor/simplesmente/Init/Bootstrap.php",
+		"/home/andre/Development/mvcSON/composer.json",
+		"/home/andre/Development/mvcSON/vendor/simplesmente/init/Bootstrap.php",
+		"/home/andre/Development/mvcSON/public/index.php",
+		"/home/andre/Development/mvcSON/public/.htaccess",
+		"/home/andre/Development/mvcSON/app/index.php",
+		"/home/andre/Development/psr4/app/models/User.php",
+		"/home/andre/Development/psr4/app/models/Auth.php",
+		"/home/andre/Development/psr4/app/models/Topic.php",
+		"/home/andre/Development/psr4/app/init.php",
+		"/home/andre/Development/psr4/composer.json",
+		"/home/andre/Development/mvcSON/App/index.php",
+		"/home/andre/Development/mvcSON/vendor/composer/autoload_psr4.php",
+		"/home/andre/Development/october/config/database.php",
+		"/home/andre/Development/SimpleFormLogin/form.php",
+		"/home/andre/Development/SimpleFormLogin/processa.php",
+		"/home/andre/Development/ooplr/core/init.php",
+		"/home/andre/Development/ooplr/index.php",
+		"/home/andre/Development/ooplr/classes/Config.php",
+		"/home/andre/Development/ooplr/functions/sanitize.php",
+		"/home/andre/Downloads/postagem6/formulario.php",
+		"/home/andre/Downloads/postagem6/form.php",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/public/js/modules/main.module.js",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/post/post.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/index.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/bootstrap.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/index/index.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/api/database_api.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/header.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/footer.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/assets/css/dashboard.css",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/assets/js/jquery.js",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/index.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/assets/js/holder.min.js",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/pages/login/check_login.php",
+		"/home/andre/Development/cmsBeginnerPHP/wcms/wcms-admin/login.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authSessions/logout_session.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authSessions/valida_session.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authSessions/home_session.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authSessions/login.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authSessions/session.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/valida_cookie.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/logout_cookies.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/produtos.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/home_cookies.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/cookies.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod10/authCookie/login.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod9/save.php",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/aula11Page2.html",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/public/js/controllers/aula11.controller.js",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/aula11.html",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/aula11Page1.html",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/aula11PageInicial.html",
+		"/home/andre/Development/cmsBeginnerPHP/mod9/config.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod9/conn.php",
+		"/home/andre/Development/cmsBeginnerPHP/mod9/contactForm.php",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/aula7.html",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/public/js/controllers/aula07.controller.js",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/Estudo-Angular/README.TXT",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/public/js/controllers/aula06.controller.js",
+		"/home/andre/Cursos/Devmedia/AngularJS/Aulas/public/js/modules/main.module.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">",
+			"$this->call('PessoaTableSeeder');",
+			"PessoaTableSeeder",
+			"php",
+			"EchoMsg",
+			"					\n",
+			";",
+			"function",
+			"footer",
+			">\n",
+			"	\n",
+			"clear",
+			"clear\n",
+			" \n",
+			"();\n",
+			"								",
+			";\n",
+			"');\n",
+			"\",\n",
+			"Topic",
+			" '/'),",
+			"erros",
+			"msg",
+			"		\n",
+			"']; ",
+			"	\n",
+			"				}",
+			"return",
+			" ",
+			"'])",
+			"php",
+			"form",
+			"php",
+			"show",
+			"else",
+			"var_dump($login,$password);",
+			" $",
+			"row",
+			"response",
+			");\n",
+			"Submit",
+			"'';\n",
+			"\">",
+			" </",
+			"app",
+			"container",
+			"produto",
+			"homestead",
+			"estoque_laravel",
+			"			\n",
+			"Livraria_Db_Abstratc",
+			"');",
+			"load",
+			"addModulo",
+			"calcula",
+			"Calculadora",
+			"HTML"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "codeproject.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"data",
+				"config/database.php"
+			],
+			[
+				"config/da",
+				"config/database.php"
+			],
+			[
+				"conectro",
+				"vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php"
+			],
+			[
+				"funcionario",
+				"Exercicies/Funcionario.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

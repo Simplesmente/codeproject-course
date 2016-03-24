@@ -53,7 +53,9 @@ class ClientService
 			
 			return $this->repository->update($data,$id);
 
-		} catch (\ValidatorException $e) {
+
+
+		} catch (ValidatorException $e) {
 			
 			return [
 				'error' => true,
@@ -62,4 +64,27 @@ class ClientService
 		}
 		
 	}
+
+	public function destroy($id)
+    {
+    	try {
+    		
+    		$this->repository->find($id)->delete();
+
+    		 return [
+    		 	'error' => true,
+    		 	'message' => 'Client Deleted'
+    		 ];
+
+    	} catch (ValidatorException $e) {
+
+    		return [
+				'error' => true,
+				'message' => $e->getMessageBag()
+			];
+    		
+    	}
+        
+
+    }
 }

@@ -16,9 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/client',['as' =>'client', 'uses' => 'ClientController@index']);
+
 Route::post('/client',['as' =>'client', 'uses' => 'ClientController@store']);
+
 Route::get('/client/{id}',['as' =>'client', 'uses' => 'ClientController@show']);
+
 Route::delete('/client/{id}',['as' =>'client', 'uses' => 'ClientController@destroy']);
+
+Route::put('/client/{id}',['as' =>'client', 'uses' => 'ClientController@update']);
 
 /*
 |--------------------------------------------------------------------------
