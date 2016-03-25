@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/client',['as' =>'client', 'uses' => 'ClientController@index']);
 
 Route::post('/client',['as' =>'client', 'uses' => 'ClientController@store']);
