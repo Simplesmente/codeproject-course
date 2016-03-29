@@ -21,6 +21,24 @@ Route::delete('/client/{id}',['as' =>'client', 'uses' => 'ClientController@destr
 
 Route::put('/client/{id}',['as' =>'client', 'uses' => 'ClientController@update']);
 
+
+Route::get('/project/{id}/note',['as' =>'projectNote', 'uses' => 'ProjectNoteController@index']);
+Route::post('/project/{id}/note',['as' =>'projectNote', 'uses' => 'ProjectNoteController@store']);
+Route::get('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@show']);
+Route::put('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@update']);
+Route::delete('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@destroy']);
+
+Route::get('/project',['as' =>'project', 'uses' => 'ProjectController@index']);
+
+Route::post('/project',['as' =>'project', 'uses' => 'ProjectController@store']);
+
+Route::get('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@show']);
+
+Route::delete('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@destroy']);
+
+Route::put('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@update']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
