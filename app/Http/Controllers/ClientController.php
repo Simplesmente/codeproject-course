@@ -31,7 +31,7 @@ class ClientController extends Controller
 
     public function update(Request $request, $id)
     {
-        return $this->repository->update($request->all(), $id);
+        return $this->service->update($request->all(), $id);
     }
 
     public function store(Request $request)
@@ -41,7 +41,7 @@ class ClientController extends Controller
 
     public function show($id)
     {
-      return $this->repository->find($id);
+      return $this->service->find($id);
     }
 
     public function destroy($id)

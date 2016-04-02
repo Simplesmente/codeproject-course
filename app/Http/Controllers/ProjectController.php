@@ -24,14 +24,29 @@ class ProjectController extends Controller
       $this->service = $service;
       $this->repository = $repository;
     }
+
+
+
     public function index()
     {
       return $this->repository->all();
     }
 
+    public function find($id = null)
+    {
+
+      return $this->repository->with(['owner', 'client'])->all();
+
+    }
+
+    public function findOne($id)
+    {
+        return $this->repository->with(['owner', 'client'])->find($id);
+    }
+
     public function update(Request $request, $id)
     {
-        return $this->repository->update($request->all(), $id);
+        return $this->service->update($request->all(), $id);
     }
 
     public function store(Request $request)
@@ -41,7 +56,7 @@ class ProjectController extends Controller
 
     public function show($id)
     {
-      return $this->repository->find($id);
+      return $this->service->find($id);
     }
 
     public function destroy($id)

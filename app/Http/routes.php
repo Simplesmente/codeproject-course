@@ -1,5 +1,5 @@
 <?php
-
+use CodeProject\Repositories\ProjectRepository;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
 
 Route::get('/client',['as' =>'client', 'uses' => 'ClientController@index']);
 
@@ -27,6 +28,12 @@ Route::post('/project/{id}/note',['as' =>'projectNote', 'uses' => 'ProjectNoteCo
 Route::get('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@show']);
 Route::put('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@update']);
 Route::delete('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@destroy']);
+
+
+
+
+Route::get('/project/owner','ProjectController@find');
+Route::get('/project/owner/{id}','ProjectController@findOne');
 
 Route::get('/project',['as' =>'project', 'uses' => 'ProjectController@index']);
 

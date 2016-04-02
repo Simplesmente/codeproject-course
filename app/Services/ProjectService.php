@@ -5,6 +5,8 @@ namespace CodeProject\Services;
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Validators\ProjectValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
+use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
+use Illuminate\Database\QueryException;
 
 class ProjectService
 {
@@ -23,6 +25,25 @@ class ProjectService
 		$this->validator = $validator;
 		$this->repository = $repository;
 	}
+
+	public function find($id)
+		{
+			try {
+
+				return $this->repository->find($id);
+
+			} catch (ModelNotFoundException $e) {
+
+				return [
+				'error' => true,
+				'message' => 'Client not exists'
+				];
+
+			}
+
+
+		}
+
 
 	public function create(array $data)
 	{
@@ -50,10 +71,20 @@ class ProjectService
 
 		try {
 			$this->validator->with($data)->passesOrFail();
+			$name = $data['name'];
+			$this->repository->update($data,$id);
 
-			return $this->repository->update($data,$id);
+			return [
+				'error' => false,
+				'message' => 'Project ' . $name . ' updated'
+			];
 
+		} catch (ModelNotFoundException $e) {
 
+			return [
+				'error' => true,
+				'message' => 'No query results'
+			];
 
 		} catch (ValidatorException $e) {
 
@@ -72,9 +103,16 @@ class ProjectService
     		$this->repository->find($id)->delete();
 
     		 return [
-    		 	'error' => true,
+    		 	'error' => false,
     		 	'message' => 'Client Deleted'
     		 ];
+
+			 } catch (ModelNotFoundException $e) {
+
+				 return [
+					 'error' => true,
+					 'message' => 'No deleted result'
+				 ];
 
     	} catch (ValidatorException $e) {
 
