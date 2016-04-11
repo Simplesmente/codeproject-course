@@ -4,10 +4,10 @@ namespace CodeProject\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CodeProject\Http\Requests;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Services\ProjectService;
+use CodeProject\Repositories\ProjectTaskRepository;
+use CodeProject\Services\ProjectTaskService;
 
-class ProjectController extends Controller
+class ProjectTaskController extends Controller
 {
    /**
      * @var IClientRepository
@@ -19,29 +19,14 @@ class ProjectController extends Controller
      */
     private $service;
 
-    public function __construct(ProjectRepository $repository, ProjectService $service)
+    public function __construct(ProjectTaskRepository $repository, ProjectTaskService $service)
     {
       $this->service = $service;
       $this->repository = $repository;
     }
-
-
-
     public function index()
     {
       return $this->repository->all();
-    }
-
-    public function find($id = null)
-    {
-
-      return $this->repository->with(['owner', 'client'])->all();
-
-    }
-
-    public function findOne($id)
-    {
-        return $this->repository->with(['owner', 'client'])->find($id);
     }
 
     public function update(Request $request, $id)
@@ -61,19 +46,8 @@ class ProjectController extends Controller
 
     public function destroy($id)
     {
+
         return $this->service->destroy($id);
-
-    }
-
-    public function destroyMember($projectId, $userId)
-    {
-        return $this->service->removeMember($projectId, $userId );
-
-    }
-
-    public function addMember($projectId, $userId)
-    {
-        return $this->service->addMember($projectId, $userId );
 
     }
 }

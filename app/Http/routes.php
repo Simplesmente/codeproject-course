@@ -12,6 +12,21 @@ use CodeProject\Repositories\ProjectRepository;
 */
 
 
+Route::post('oauth/access_token', function(){
+    return Response::json(Authorizer::issueAccessToken());
+});
+
+Route::get('/projecttask',['as' =>'client', 'uses' => 'ProjectTaskController@index']);
+
+Route::post('/projecttask',['as' =>'client', 'uses' => 'ProjectTaskController@store']);
+
+Route::get('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@show']);
+
+Route::delete('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@destroy']);
+
+Route::put('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@update']);
+
+
 Route::get('/client',['as' =>'client', 'uses' => 'ClientController@index']);
 
 Route::post('/client',['as' =>'client', 'uses' => 'ClientController@store']);
@@ -37,10 +52,12 @@ Route::get('/project/owner/{id}','ProjectController@findOne');
 
 Route::get('/project',['as' =>'project', 'uses' => 'ProjectController@index']);
 
+Route::post('/project/{projectId}/user/{userId}',['as' =>'project', 'uses' => 'ProjectController@addMember']);
 Route::post('/project',['as' =>'project', 'uses' => 'ProjectController@store']);
 
 Route::get('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@show']);
 
+Route::delete('/project/{projectId}/user/{userId}',['as' =>'project', 'uses' => 'ProjectController@destroyMember']);
 Route::delete('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@destroy']);
 
 Route::put('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@update']);

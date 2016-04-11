@@ -26,8 +26,39 @@ class ProjectService
 		$this->repository = $repository;
 	}
 
+	public function addMember($project_id, $user_id)
+	{
+		$project = $this->repository->find($project_id);
+
+		if(!$this->isMember($project_id, $user_id)){
+
+				$project->members()->attach($user_id);
+
+		}
+
+			return $project->members()->get();
+	}
+
+	public function removeMember($project_id, $user_id)
+	{
+		$project = $this->repository->find($project_id);
+		$project->members()->detach($user_id);
+
+		return $project->members()->get();
+	}
+
+	public function isMember($project_id, $user_id)
+	{
+		$project = $this->repository->find($project_id)->members()->find(['user_id' => $user_id]);
+
+		if(count($project)){
+				return true;
+		}else{
+				return false;
+		}
+	}
 	public function find($id)
-		{
+	{
 			try {
 
 				return $this->repository->find($id);
@@ -97,7 +128,7 @@ class ProjectService
 	}
 
 	public function destroy($id)
-    {
+  {
     	try {
 
     		$this->repository->find($id)->delete();
