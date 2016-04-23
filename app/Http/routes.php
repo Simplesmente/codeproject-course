@@ -16,51 +16,30 @@ Route::post('oauth/access_token', function(){
     return Response::json(Authorizer::issueAccessToken());
 });
 
-Route::get('/projecttask',['as' =>'client', 'uses' => 'ProjectTaskController@index']);
 
-Route::post('/projecttask',['as' =>'client', 'uses' => 'ProjectTaskController@store']);
+Route::group(['middleware' => 'oauth'], function(){
 
-Route::get('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@show']);
+  Route::resource('client', 'ClientController', ['except' => ['create','edit']]);
+  Route::resource('projecttask', 'ProjectTaskController', ['except' => ['create','edit']]);
+  Route::resource('project', 'ProjectController',['except' => ['create', 'edit']]);
 
-Route::delete('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@destroy']);
+  // Route::group(['middleware' =>'CheckProjectOwner' ], function(){
+  //   Route::resource('project', 'ProjectController',['except' => ['create', 'edit']]);
+  // });
 
-Route::put('/projecttask/{id}',['as' =>'client', 'uses' => 'ProjectTaskController@update']);
+  Route::group(['prefix' => 'project'], function(){
 
+        Route::get('{id}/note','ProjectNoteController@index');
+        Route::post('{id}/note','ProjectNoteController@store');
+        Route::get('{id}/note/{noteId}','ProjectNoteController@show');
+        Route::put('{id}/note/{noteId}','ProjectNoteController@update');
+        Route::delete('{id}/note/{noteId}','ProjectNoteController@destroy');
 
-Route::get('/client',['as' =>'client', 'uses' => 'ClientController@index']);
+  });
 
-Route::post('/client',['as' =>'client', 'uses' => 'ClientController@store']);
-
-Route::get('/client/{id}',['as' =>'client', 'uses' => 'ClientController@show']);
-
-Route::delete('/client/{id}',['as' =>'client', 'uses' => 'ClientController@destroy']);
-
-Route::put('/client/{id}',['as' =>'client', 'uses' => 'ClientController@update']);
-
-
-Route::get('/project/{id}/note',['as' =>'projectNote', 'uses' => 'ProjectNoteController@index']);
-Route::post('/project/{id}/note',['as' =>'projectNote', 'uses' => 'ProjectNoteController@store']);
-Route::get('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@show']);
-Route::put('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@update']);
-Route::delete('/project/{id}/note/{noteId}',['as' =>'projectNote', 'uses' => 'ProjectNoteController@destroy']);
+});
 
 
-
-
-Route::get('/project/owner','ProjectController@find');
-Route::get('/project/owner/{id}','ProjectController@findOne');
-
-Route::get('/project',['as' =>'project', 'uses' => 'ProjectController@index']);
-
-Route::post('/project/{projectId}/user/{userId}',['as' =>'project', 'uses' => 'ProjectController@addMember']);
-Route::post('/project',['as' =>'project', 'uses' => 'ProjectController@store']);
-
-Route::get('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@show']);
-
-Route::delete('/project/{projectId}/user/{userId}',['as' =>'project', 'uses' => 'ProjectController@destroyMember']);
-Route::delete('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@destroy']);
-
-Route::put('/project/{id}',['as' =>'project', 'uses' => 'ProjectController@update']);
 
 
 /*
