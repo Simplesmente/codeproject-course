@@ -2,11 +2,15 @@
 
 namespace CodeProject\Services;
 
+use Illuminate\Contracts\Filesystem\Factory as Storage;
+use Illuminate\Filesystem\Filesystem;
+
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Validators\ProjectValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
 use Illuminate\Database\QueryException;
+
 
 class ProjectService
 {
@@ -20,10 +24,15 @@ class ProjectService
 	 */
 	private $validator;
 
-	public function __construct(ProjectRepository $repository, ProjectValidator $validator)
+	public function __construct(ProjectRepository $repository,
+															ProjectValidator $validator,
+															Filesystem $filesystem,
+															Storage $storage)
 	{
 		$this->validator = $validator;
 		$this->repository = $repository;
+		$this->filesystem = $filesystem;
+		$this->storage = $storage;
 	}
 
 	public function addMember($project_id, $user_id)
@@ -156,4 +165,13 @@ class ProjectService
 
 
     }
+
+		public function createFile(array $data)
+		{
+			// name, description, extension, File
+			$project = $this->repository->skipPresenter()->find($data['project_id']);
+			$projectFile = $project->files()->create($data);
+
+			$this->storage->put($projectFile->id .".". $data['extension'], $this->filesystem->get($data['file']));
+		}
 }
