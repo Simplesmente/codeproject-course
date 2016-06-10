@@ -2,7 +2,7 @@
 
 namespace CodeProject\Services;
 
-use CodeProject\Repositories\IClientRepository;
+use CodeProject\Repositories\ClientRepository;
 use CodeProject\Validators\ClientValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
@@ -20,7 +20,7 @@ class ClientService
 	 */
 	private $validator;
 
-	public function __construct(IClientRepository $repository, ClientValidator $validator)
+	public function __construct(ClientRepository $repository, ClientValidator $validator)
 	{
 		$this->validator = $validator;
 		$this->repository = $repository;

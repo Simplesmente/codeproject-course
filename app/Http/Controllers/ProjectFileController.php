@@ -5,8 +5,9 @@ namespace CodeProject\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CodeProject\Http\Requests;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Services\ProjectService;
+use CodeProject\Repositories\ProjectFileRepository;
+use CodeProject\Services\ProjectFileService;
+
 
 class ProjectFileController extends Controller
 {
@@ -22,11 +23,10 @@ class ProjectFileController extends Controller
 
     //private $userId;
 
-    public function __construct(ProjectRepository $repository, ProjectService $service)
+    public function __construct(ProjectFileRepository $repository, ProjectFileService $service)
     {
-      $this->service = $service;
       $this->repository = $repository;
-
+      $this->service = $service;
     }
 
 
@@ -36,10 +36,10 @@ class ProjectFileController extends Controller
       return $this->repository->findWhere(['owner_id' => $userId = \Authorizer::getResourceOwnerId()]);
     }
 
-    public function find($id = null)
+    public function find($id)
     {
 
-      return $this->repository->with(['owner', 'client'])->all();
+      return $this->service->find($id);
 
     }
 

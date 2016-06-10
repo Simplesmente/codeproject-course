@@ -26,6 +26,8 @@ class ProjectTaskController extends Controller
     }
     public function index()
     {
+       $projects = $this->repository->findWhere(['owner_id' => $userId = \Authorizer::getResourceOwnerId()]);
+       
       return $this->repository->all();
     }
 

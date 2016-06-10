@@ -5,7 +5,7 @@ namespace CodeProject\Repositories;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use CodeProject\Repositories\ProjectTaskRepository;
-use CodeProject\Entities\ProjectTask;
+use CodeProject\Entities\ProjectFile;
 use CodeProject\Validators\ProjectTaskValidator;
 use CodeProject\Presenters\ProjectTaskPresenter;
 
@@ -13,7 +13,7 @@ use CodeProject\Presenters\ProjectTaskPresenter;
  * Class ProjectTaskRepositoryEloquent
  * @package namespace CodeProject\Repositories;
  */
-class ProjectTaskRepositoryEloquent extends BaseRepository implements ProjectTaskRepository
+class ProjectFileRepositoryEloquent extends BaseRepository implements ProjectFileRepository
 {
     /**
      * Specify Model class name
@@ -22,18 +22,9 @@ class ProjectTaskRepositoryEloquent extends BaseRepository implements ProjectTas
      */
     public function model()
     {
-        return ProjectTask::class;
+        return ProjectFile::class;
     }
-    
-    public function isOwner($projectId, $userId)
-    {
 
-      if( count($this->findWhere(['id' => $projectId, 'owner_id' => $userId])) ){
-            return true;
-      }
-
-        return false;
-    }
     /**
      * Boot up the repository, pushing criteria
      */

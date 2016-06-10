@@ -32,7 +32,14 @@ class ProjectController extends Controller
 
     public function index()
     {
-      return $this->repository->findWhere(['owner_id' => $userId = \Authorizer::getResourceOwnerId()]);
+        $projects = $this->repository->findWhere(['owner_id' => $userId = \Authorizer::getResourceOwnerId()]);
+        
+        if(! $projects['data']){
+            
+            return ['message' => 'error retrieving data'];
+        }
+        
+          return $projects;
     }
 
     public function find($id = null)
