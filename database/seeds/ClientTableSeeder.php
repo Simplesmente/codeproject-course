@@ -14,5 +14,6 @@ class ClientTableSeeder extends Seeder
     {
     //  Client::truncate();
       factory(Client::class,10)->create();
+
     }
 }

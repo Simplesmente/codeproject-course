@@ -1,8 +1,9 @@
 <?php
 namespace CodeProject\Transformers;
 
-use CodeProject\Entities\Client;
 use League\Fractal\TransformerAbstract;
+
+use CodeProject\Entities\Client;
 
 class ClientTransformer extends TransformerAbstract
 {

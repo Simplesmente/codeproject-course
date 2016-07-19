@@ -70,3 +70,14 @@ $factory->define(CodeProject\Entities\ProjectMembers::class, function (Faker\Gen
 
     ];
 });
+
+$factory->define(CodeProject\Entities\OauthClient::class, function (Faker\Generator $faker) {
+    return [
+
+      'id' => 'appid1',
+      'secret' => 'secret',
+      'name' => 'applaravel'
+
+    ];
+});
+

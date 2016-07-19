@@ -19,7 +19,6 @@ class ProjectController extends Controller
      */
     private $service;
 
-    //private $userId;
 
     public function __construct(ProjectRepository $repository, ProjectService $service)
     {
@@ -32,8 +31,10 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = $this->repository->findWhere(['owner_id' => $userId = \Authorizer::getResourceOwnerId()]);
-        
+        $userId = \Authorizer::getResourceOwnerId();
+
+        $projects = $this->repository->findWhere(['owner_id' => $userId]);
+
         if(! $projects['data']){
             
             return ['message' => 'error retrieving data'];

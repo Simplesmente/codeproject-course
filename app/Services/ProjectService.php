@@ -174,4 +174,17 @@ class ProjectService
 
 			$this->storage->put($projectFile->id .".". $data['extension'], $this->filesystem->get($data['file']));
 		}
+
+		public function deleteFile(array $data)
+		{
+
+			$project = $this->repository->skipPresenter()->find($data['project_id']);
+
+			$filename = $project->files()->first();
+			$filename = $filename->id . '.'. $filename->extension;
+			$projectFile = $project->files()->delete();
+
+			$this->storage->delete($filename);
+
+		}
 }
