@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" >
         <title>Laravel</title>
 
-        @if(Config::get('app.debug'))
+        @if( Config::get('app.debug') )
           <link rel="stylesheet" href="{{ asset('build/css/vendor/bootstrap.min.css')}}" media="screen" title="no title" charset="utf-8">
           <link rel="stylesheet" href="{{ asset('build/css/vendor/bootstrap-theme.min.css')}}" media="screen" title="no title" charset="utf-8">
         @else
-            <link rel="stylesheet" href="{{ elixir('css/all.css')}}" media="screen" title="no title" charset="utf-8">
+            <link rel="stylesheet" href="{{ elixir('css/all.css') }}" media="screen" title="no title" charset="utf-8">
         @endif
 
         </style>
