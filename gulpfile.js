@@ -24,6 +24,9 @@ config.vendorPathJs = [
   config.bowerPath + '/angular-messages/angular-messages.min.js',
   config.bowerPath + '/angular-bootstrap/ui-bootstrap.min.js',
   config.bowerPath + '/angular-strap/dist/modules/navbar.min.js',
+  config.bowerPath + '/angular-cookies/angular-cookies.min.js',
+  config.bowerPath + '/angular-oauth2/dist/angular-oauth2.min.js',
+  config.bowerPath + '/query-string/query-string.js'
   
 ];
 
@@ -34,6 +37,17 @@ config.vendorPathCss = [
   config.bowerPath + '/bootstrap/dist/css/bootstrap-theme.min.css',
 ];
 
+config.buildPathHtml = config.buildPath + '/views';
+
+gulp.task('copy-html',function(){
+
+  gulp.src([
+   config.assetsPath + '/js/views/**/*.htm'
+  ])
+ .pipe(gulp.dest(config.buildPathHtml))
+  .pipe(liveReload());
+
+});
 
 gulp.task('copy-styles',function(){
 
@@ -68,7 +82,7 @@ gulp.task('clean-build-folder',() => {
 
 gulp.task('default',['clean-build-folder'],() =>{
   elixir((mix)=> {
-    
+    gulp.start('copy-html');
     mix.styles(config.vendorPathCss.concat([config.assetsPath + '/css/**/*.css']),
     'public/css/all.css',config.assetsPath);
     
@@ -84,8 +98,8 @@ gulp.task('watch-dev',['clean-build-folder'], function(){
   
   liveReload.listen();
 
-  gulp.start('copy-styles','copy-scripts');
-      gulp.watch(config.assetsPath + "/**", ['copy-styles','copy-scripts']);
+  gulp.start('copy-styles','copy-scripts','copy-html');
+      gulp.watch(config.assetsPath + "/**", ['copy-styles','copy-scripts','copy-html']);
 });
 
 
