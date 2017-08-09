@@ -96,7 +96,7 @@ class ClientService
     {
     	try {
 
-    		$this->repository->find($id)->delete();
+					$this->repository->skipPresenter()->find($id)->delete();
 
     		 return [
     		 	'error' => false,

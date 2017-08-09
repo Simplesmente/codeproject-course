@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">Listagem de clientes</div>
+                <div class="panel-body">
+
+                 <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Responsável</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th>Observações</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="client in clients">
+                            <td>{{client.name}}</td>
+                            <td>{{client.responsable}}</td>
+                            <td>{{client.email}}</td>
+                            <td>{{client.phone}}</td>
+                            <td>{{client.address}}</td>
+                            <td>{{client.obs}}</td>
+                            <td>
+                                <a ng-href="#/clients/{{client.id}}/edit">Editar</a>
+                                <a ng-href="#/clients/{{client.id}}/remove">Remover</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                 </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

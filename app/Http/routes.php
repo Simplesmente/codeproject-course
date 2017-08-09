@@ -23,7 +23,7 @@ Route::post('oauth/access_token', function(){
 
 Route::group(['middleware' => 'oauth'], function(){
 
-  Route::resource('members', 'ClientController', ['except' => ['create','edit']]);
+  Route::resource('client', 'ClientController', ['except' => ['create','edit']]);
   Route::resource('tasks', 'ProjectTaskController', ['except' => ['create','edit']]);
   Route::resource('project', 'ProjectController',['except' => ['create', 'edit']]);
 
@@ -33,11 +33,11 @@ Route::group(['middleware' => 'oauth'], function(){
 
   Route::group(['prefix' => 'project'], function(){
 
-        Route::get('{id}/tasks','ProjectNoteController@index');
-        Route::post('{id}/tasks','ProjectNoteController@store');
-        Route::get('{id}/tasks/{noteId}','ProjectNoteController@show');
-        Route::put('{id}/tasks/{noteId}','ProjectNoteController@update');
-        Route::delete('{id}/tasks/{noteId}','ProjectNoteController@destroy');
+        Route::get('{id}/notes','ProjectNoteController@index');
+        Route::post('{id}/notes','ProjectNoteController@store');
+        Route::get('{id}/notes/{noteId}','ProjectNoteController@show');
+        Route::put('{id}/notes/{noteId}','ProjectNoteController@update');
+        Route::delete('{id}/notes/{noteId}','ProjectNoteController@destroy');
 
         Route::post('{id}/file','ProjectFileController@store');
         Route::delete('{id}/file/{fileId}','ProjectFileController@destroy');

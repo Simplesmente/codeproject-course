@@ -1,2 +1,4 @@
 angular.module('app.controllers')
-        .controller('HomeController');
+        .controller('HomeController',['$scope',function($scope){
+
+}]);

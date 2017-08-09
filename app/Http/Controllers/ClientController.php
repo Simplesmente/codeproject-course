@@ -26,7 +26,7 @@ class ClientController extends Controller
     }
     public function index()
     {
-      return $this->repository->all();
+      return $this->repository->all()['data'];
     }
 
     public function update(Request $request, $id)
@@ -47,6 +47,5 @@ class ClientController extends Controller
     public function destroy($id)
     {
         return $this->service->destroy($id);
-
     }
 }

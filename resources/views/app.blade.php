@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app"> 
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" >
@@ -15,7 +15,7 @@
         </style>
     </head>
     <body>
-        
+
         <div ng-view></div>
 
 
@@ -34,8 +34,23 @@
 
 
           <script src="{{ asset('build/js/app.js') }}" charset="utf-8"></script>
+
           <script src="{{ asset('build/js/controllers/LoginController.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/controllers/HomeController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/client/ClientListController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/client/ClientNewController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/client/ClientEditController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/client/ClientRemoveController.js') }}" charset="utf-8"></script>
+
+          <script src="{{ asset('build/js/controllers/notes/NotesListController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/notes/NotesListOneController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/notes/NotesNewController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/notes/NotesEditController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/notes/NotesRemoveController.js') }}" charset="utf-8"></script>
+
+          <script src="{{ asset('build/js/services/Client.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/services/Notes.js') }}" charset="utf-8"></script>
+
 
       @else
            <script src="{{ elixir('js/all.js') }}" charset="utf-8"></script>
