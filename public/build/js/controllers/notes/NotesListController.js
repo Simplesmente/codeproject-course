@@ -1,11 +1,7 @@
 angular.module('app.controllers')
-        .controller('NotesListController',['$scope','Notes',function($scope,Notes){
-
-
-          var result = Notes.query({idProject:1},function(data){
+        .controller('NotesListController',['$scope','Notes','$routeParams',function($scope,Notes,$routeParams){
+        
+          var result = Notes.query({idProject:$routeParams.idProject},function(data){
             $scope.notes = data;
           });
-
-
-
 }]);

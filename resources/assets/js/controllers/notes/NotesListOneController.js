@@ -1,9 +1,13 @@
 angular.module('app.controllers')
-        .controller('NotesListOneController',['$scope','Notes',function($scope,Notes){
-
-          var result = Notes.query({idProject:1},function(data){
-            $scope.note = data;
-          });
+        .controller('NotesListOneController',['$scope','$routeParams','Notes',function($scope,$routeParams,Notes){
+          
+          console.log('aquiiiiii');
+          //console.log($routeParams);
+          
+          var params = {
+                        idProject:$routeParams.idProject,
+                        id:$routeParams.id
+                      };
 
 
 

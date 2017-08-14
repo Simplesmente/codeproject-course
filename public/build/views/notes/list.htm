@@ -16,7 +16,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="note in notes">
-                            <td>{{note.project_id}}</td>
+                            <td><a href="/project/1/notes/{{note.id}}">{{note.project_id}}</a></td>
                             <td>{{note.title}}</td>
                             <td>{{note.note}}</td>
                             <td>

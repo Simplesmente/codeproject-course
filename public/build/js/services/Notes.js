@@ -5,6 +5,11 @@ angular.module('app.services').service('Notes',['$resource','appConfig',function
         update: {
             method:'PUT'
         },
+        getOne: {
+            method: 'GET',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }
+       
     });
 
 }]);

@@ -48,8 +48,11 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
         .when('/project/:idProject/notes/',{
             templateUrl:'build/views/notes/list.htm',
             controller:'NotesListController'
+        })
+        .when('/project/:idProject/notes/:id',{
+            templateUrl:'build/views/notes/listOne.htm',
+            controller:'NotesListOneController'
         });
-
 
 
 
