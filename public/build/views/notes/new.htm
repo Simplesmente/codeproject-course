@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">Adicionar nota ao projeto</div>
+                <div class="panel-body">
+                    
+                    <form class="form-horizontal" ng-submit="save()" name="form">
+                        
+                        <div class="form-group" ng-class="{'has-error':!form.name.$valid && form.name.$touched}">
+                            <label for="title" class="col-md-4 control-label">Titulo</label>
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="text" class="form-control" name="title" ng-model="note.title" required>
+                                <div ng-messages="form.title.$error" class="help-block" ng-show="form.title.$touched">
+                                    <div ng-message="required">Campo Obrigatório</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error':!form.note.$valid && form.note.$touched}">
+                            <label for="note" class="col-md-4 control-label">Nota</label>
+                            <div class="col-md-6">
+                                <textarea class="form-control" name="note" ng-model="note.note" required></textarea>
+
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="text" class="btn btn-primary">Cadastrar</button>
+                                <a ng-href="#/project/1/notes" class="btn btn-default">Voltar as notas</a>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

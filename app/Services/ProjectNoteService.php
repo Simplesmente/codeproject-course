@@ -47,7 +47,7 @@ class ProjectNoteService
 
 	public function update(array $data, $id)
 	{
-
+		
 		try {
 			$this->validator->with($data)->passesOrFail();
 

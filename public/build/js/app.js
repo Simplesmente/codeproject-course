@@ -49,9 +49,21 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
             templateUrl:'build/views/notes/list.htm',
             controller:'NotesListController'
         })
+        .when('/project/:idProject/notes/new',{
+            templateUrl:'build/views/notes/new.htm',
+            controller:'NotesNewController'
+        })
         .when('/project/:idProject/notes/:id',{
             templateUrl:'build/views/notes/listOne.htm',
             controller:'NotesListOneController'
+        })
+        .when('/project/:idProject/notes/:id/edit',{
+            templateUrl:'build/views/notes/edit.htm',
+            controller:'NotesEditController'
+        })
+        .when('/project/:idProject/notes/:id/remove',{
+            templateUrl:'build/views/notes/remove.htm',
+            controller:'NotesRemoveController'
         });
 
 

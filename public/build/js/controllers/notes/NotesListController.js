@@ -3,5 +3,6 @@ angular.module('app.controllers')
         
           var result = Notes.query({idProject:$routeParams.idProject},function(data){
             $scope.notes = data;
+            console.log(data);
           });
 }]);

@@ -4,6 +4,7 @@ namespace CodeProject\Http\Controllers;
 
 use Illuminate\Http\Request;
 use CodeProject\Http\Requests;
+use Illuminate\Support\Facades\Response;
 use CodeProject\Repositories\ProjectNoteRepository;
 use CodeProject\Services\ProjectNoteService;
 
@@ -29,13 +30,24 @@ class ProjectNoteController extends Controller
       return $this->repository->findWhere(['project_id' => $id]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$noteId)
     {
-        return $this->repository->update($request->all(), $id);
+       return $this->service->update($request->all(), $noteId);
     }
 
     public function store(Request $request)
     {
+
+      $result = $this->service->create($request->all());
+
+      if( $result['error'] ) {
+       
+        return response(
+          $result['message']->getMessages()['project_id'],
+          400 
+        )->header('Content-Type','application/json');
+      }
+
       return $this->service->create($request->all());
     }
 

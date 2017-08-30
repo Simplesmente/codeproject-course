@@ -4,10 +4,6 @@ angular.module('app.services').service('Notes',['$resource','appConfig',function
     return $resource(url,{id:'@id',idProject:'@idProject'},{
         update: {
             method:'PUT'
-        },
-        getOne: {
-            method: 'GET',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }
        
     });
