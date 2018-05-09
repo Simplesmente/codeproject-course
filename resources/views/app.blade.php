@@ -26,7 +26,7 @@
           <script src="{{ asset('build/js/vendor/angular-resource.min.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/vendor/angular-animate.min.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/vendor/angular-messages.min.js') }}" charset="utf-8"></script>
-          <script src="{{ asset('build/js/vendor/ui-bootstrap.min.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/vendor/ui-bootstrap-tpls.min.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/vendor/navbar.min.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/vendor/angular-cookies.min.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/vendor/query-string.js') }}" charset="utf-8"></script>
@@ -48,11 +48,21 @@
           <script src="{{ asset('build/js/controllers/notes/NotesEditController.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/controllers/notes/NotesRemoveController.js') }}" charset="utf-8"></script>
 
+          <script src="{{ asset('build/js/controllers/projects/ProjectListController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/projects/ProjectListOneController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/projects/ProjectNewController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/projects/ProjectEditController.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/controllers/projects/ProjectRemoveController.js') }}" charset="utf-8"></script>
+          <!-- Servies -->
           <script src="{{ asset('build/js/services/Client.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/services/User.js') }}" charset="utf-8"></script>
           <script src="{{ asset('build/js/services/Notes.js') }}" charset="utf-8"></script>
+          <script src="{{ asset('build/js/services/Project.js') }}" charset="utf-8"></script>
+          <!-- Filters -->
 
+          <script src="{{ asset('build/js/filters/date-br.js') }}" charset="utf-8"></script>
 
-      @else
+        @else
            <script src="{{ elixir('js/all.js') }}" charset="utf-8"></script>
         @endif
     </body>

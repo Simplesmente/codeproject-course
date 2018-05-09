@@ -4,8 +4,8 @@ namespace CodeProject\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Repositories\ClientRepository;
 use CodeProject\Entities\Client;
+use CodeProject\Repositories\ClientRepository;
 use CodeProject\Validators\ClientValidator;
 use CodeProject\Presenters\ClientPresenter;
 
@@ -15,6 +15,10 @@ use CodeProject\Presenters\ClientPresenter;
  */
 class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
 {
+    protected $fieldSearchable = [
+      'name'
+    ];
+    
     /**
      * Specify Model class name
      *
@@ -25,14 +29,19 @@ class ClientRepositoryEloquent extends BaseRepository implements ClientRepositor
         return Client::class;
     }
 
-    
+
 
     /**
      * Boot up the repository, pushing criteria
      */
+    // public function boot()
+    // {
+    //     $this->pushCriteria(app(RequestCriteria::class));
+    // }
+
     public function boot()
     {
-        $this->pushCriteria(app(RequestCriteria::class));
+       $this->pushCriteria(app(RequestCriteria::class));
     }
 
     public function presenter()

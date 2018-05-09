@@ -36,22 +36,25 @@ class ProjectController extends Controller
         $projects = $this->repository->findWhere(['owner_id' => $userId]);
 
         if(! $projects['data']){
-            
+
             return ['message' => 'error retrieving data'];
         }
-        
-          return $projects;
+
+          return $projects['data'];
     }
 
     public function find($id = null)
     {
+      $result = $this->repository->with(['owner', 'client'])->all();
 
-      return $this->repository->with(['owner', 'client'])->all();
+      return $result;
 
     }
 
     public function findOne($id)
     {
+        $this->repository->with(['owner', 'client'])->find($id);
+
         return $this->repository->with(['owner', 'client'])->find($id);
     }
 
@@ -75,7 +78,10 @@ class ProjectController extends Controller
             return ['message' => 'Access Forbidden'];
         }
 
-      return $this->service->find($id);
+      $result = $this->service->find($id);
+
+      return $result['data'];
+
     }
 
     public function destroy($id)

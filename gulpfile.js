@@ -22,12 +22,12 @@ config.vendorPathJs = [
   config.bowerPath + '/angular-resource/angular-resource.min.js',
   config.bowerPath + '/angular-animate/angular-animate.min.js',
   config.bowerPath + '/angular-messages/angular-messages.min.js',
-  config.bowerPath + '/angular-bootstrap/ui-bootstrap.min.js',
+  config.bowerPath + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
   config.bowerPath + '/angular-strap/dist/modules/navbar.min.js',
   config.bowerPath + '/angular-cookies/angular-cookies.min.js',
   config.bowerPath + '/angular-oauth2/dist/angular-oauth2.min.js',
   config.bowerPath + '/query-string/query-string.js'
-  
+
 ];
 
 config.buildPathCss = config.buildPath + '/css';
@@ -69,7 +69,7 @@ gulp.task('copy-scripts',function(){
   ])
   .pipe(gulp.dest(config.buildPathJs))
   .pipe(liveReload());
-  
+
   gulp.src(config.vendorPathJs)
   .pipe(gulp.dest(config.buildVendorPathJs))
   .pipe(liveReload());
@@ -85,21 +85,19 @@ gulp.task('default',['clean-build-folder'],() =>{
     gulp.start('copy-html');
     mix.styles(config.vendorPathCss.concat([config.assetsPath + '/css/**/*.css']),
     'public/css/all.css',config.assetsPath);
-    
+
     mix.scripts(config.vendorPathJs.concat([config.assetsPath + '/js/**/*.js']),
     'public/js/all.js',config.assetsPath);
-    
+
     mix.version(['js/all.js','css/all.css']);
-  
+
   });
 });
 
 gulp.task('watch-dev',['clean-build-folder'], function(){
-  
+
   liveReload.listen();
 
   gulp.start('copy-styles','copy-scripts','copy-html');
       gulp.watch(config.assetsPath + "/**", ['copy-styles','copy-scripts','copy-html']);
 });
-
-

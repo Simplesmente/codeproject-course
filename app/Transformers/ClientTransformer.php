@@ -1,12 +1,21 @@
 <?php
 namespace CodeProject\Transformers;
 
+use CodeProject\Entities\Client;
+
 use League\Fractal\TransformerAbstract;
 
-use CodeProject\Entities\Client;
 
 class ClientTransformer extends TransformerAbstract
 {
+
+  /**
+   * Transform the \Client entity
+   * @param \Client $model
+   *
+   * @return array
+   */
+
 
   public function transform(Client $client)
   {
@@ -21,5 +30,5 @@ class ClientTransformer extends TransformerAbstract
       ];
 
   }
-  
+
 }

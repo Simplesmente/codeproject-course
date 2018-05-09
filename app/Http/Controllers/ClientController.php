@@ -41,7 +41,9 @@ class ClientController extends Controller
 
     public function show($id)
     {
-      return $this->service->find($id);
+      $result = $this->service->find($id);
+
+      return $result['data'];
     }
 
     public function destroy($id)
